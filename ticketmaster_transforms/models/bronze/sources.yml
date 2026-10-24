@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: ticketmaster_source
+    schema: raw
+    tables:
+      - name: ticketmaster_events
+      - name: ticketmaster_events__price_ranges

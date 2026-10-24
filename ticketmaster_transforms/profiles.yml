@@ -1,0 +1,8 @@
+ticketmaster_transforms:
+  outputs:
+    dev:
+      type: duckdb
+      # dbt will automatically grab the token from the server's environment!
+      path: "md:my_db?motherduck_token={{ env_var('MOTHERDUCK_TOKEN') }}"
+      threads: 4
+  target: dev
