@@ -2,6 +2,8 @@
 
 An automated ELT pipeline and dashboard that measures event supply, ticket pricing, and booking lead times across three major US entertainment markets. Event data is extracted from the Ticketmaster Discovery API, loaded into MotherDuck, transformed with dbt, and served through a Streamlit dashboard. A GitHub Actions workflow refreshes everything daily.
 
+[View Live Dashboard](https://ticketmaster-analytics-pipeline-wytxg2ea9nrwe96ufphppf.streamlit.app/)
+
 ## Business Context
 
 The pipeline answers three questions for event promoters, tour managers, and ticket brokers across **New York, Los Angeles, and Chicago** and the **Music, Sports, and Arts & Theatre** segments:
