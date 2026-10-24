@@ -15,7 +15,7 @@ st.markdown("Pipeline metrics from the dbt Gold layer, refreshed daily.")
 # 1. Load Data (cache expires hourly; data only changes with the daily pipeline run)
 @st.cache_data(ttl=3600)
 def load_data():
-    token = st.secrets["MOTHERDUCK_TOKEN"]  # set in .streamlit/secrets.toml locally, or in the app's Secrets settings when deployed
+    token = st.secrets["MOTHERDUCK_TOKEN_READ"]  # set in .streamlit/secrets.toml locally, or in the app's Secrets settings when deployed
     # read_only=True prevents database locking conflicts
     with duckdb.connect(f"md:my_db?motherduck_token={token}", read_only=True) as conn:
         return conn.execute("SELECT * FROM main.gold_metrics").df()
